@@ -1,4 +1,5 @@
 package org.example.pageobjectbegin.pages;
+import org.example.pageobjectbegin.tests.BingSearchTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -29,7 +30,7 @@ public class ResultsPage {
         ));
 
         ArrayList tabs = new ArrayList<> (driver.getWindowHandles());
-        if (tabs.size() > 1) driver.switchTo().window(tabs.get(1).toString());
+        if (tabs.size() > 1) driver.window(tabs.get(1).toString());
 
         results.get(0).click();
 
